@@ -9,6 +9,10 @@
 .history
 .svn/
 migrate_working_dir/
+.env
+Disease Diet Restaurant Finder.pptx
+disease_diet_restaurant_finder.iml
+DDRF_WorkFlow.jpg
 
 # IntelliJ related
 *.iml

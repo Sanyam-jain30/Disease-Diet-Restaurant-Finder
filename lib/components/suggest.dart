@@ -1,16 +1,15 @@
 import 'package:flutter/material.dart';
-
 import '../models/disease.dart';
 
-class Avoid extends StatefulWidget {
-  const Avoid({Key? key, required this.disease}) : super(key: key);
+class Suggest extends StatefulWidget {
+  const Suggest({Key? key, required this.disease}) : super(key: key);
 
   final String disease;
   @override
-  State<Avoid> createState() => _AvoidState();
+  State<Suggest> createState() => _SuggestState();
 }
 
-class _AvoidState extends State<Avoid> {
+class _SuggestState extends State<Suggest> {
   List<String> list = [];
 
   void _getDiseases() {
@@ -18,7 +17,7 @@ class _AvoidState extends State<Avoid> {
 
     for (var d in temp) {
       if(d.name == widget.disease){
-        for (var f in d.avoid){
+        for (var f in d.suggest){
           list.add(f);
         }
       }
@@ -36,7 +35,7 @@ class _AvoidState extends State<Avoid> {
     return Column(
       children: [
         const Text(
-          "Avoid",
+          "Suggest",
           style: TextStyle(
               color: Colors.black,
               fontSize: 20,
@@ -52,10 +51,10 @@ class _AvoidState extends State<Avoid> {
               return SizedBox(
                 height: 30,
                 child: Center(child: Text(
-                    list[index],
-                    style: const TextStyle(
-                      color: Colors.red,
-                    ),
+                  list[index],
+                  style: const TextStyle(
+                    color: Colors.green,
+                  ),
                 )),
               );
             }

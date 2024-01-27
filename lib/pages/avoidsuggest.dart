@@ -1,6 +1,10 @@
+import 'package:auto_size_text/auto_size_text.dart';
+import 'package:disease_diet_restaurant_finder/components/location.dart';
+import 'package:disease_diet_restaurant_finder/components/suggest.dart';
 import 'package:flutter/material.dart';
 
 import '../components/avoid.dart';
+import '../components/restaurantloader.dart';
 
 class AvoidSuggest extends StatefulWidget {
   final String disease;
@@ -15,16 +19,16 @@ class _AvoidSuggestPageState extends State<AvoidSuggest> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text(
-          'Disease Diet Restaurant Finder',
+        title: const AutoSizeText(
+          'Finding Ingredients',
           style: TextStyle(
-              color: Colors.black,
-              fontSize: 22,
+              color: Colors.white,
+              fontSize: 24,
               fontWeight: FontWeight.bold
           ),
         ),
         elevation: 0.0,
-        backgroundColor: Colors.white,
+        backgroundColor: Colors.purple,
         centerTitle: true,
       ),
       body: Column(
@@ -32,6 +36,9 @@ class _AvoidSuggestPageState extends State<AvoidSuggest> {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Avoid(disease: widget.disease),
+          Suggest(disease: widget.disease),
+          const RestaurantLoader(),
+          Location(disease: widget.disease)
         ],
       ),
     );

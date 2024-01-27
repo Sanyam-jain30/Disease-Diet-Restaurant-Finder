@@ -1,3 +1,4 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:disease_diet_restaurant_finder/components/diseaselist.dart';
 import 'package:disease_diet_restaurant_finder/components/videoplayer.dart';
 import 'package:flutter/material.dart';
@@ -14,16 +15,16 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text(
+        title: const AutoSizeText(
           'Disease Diet Restaurant Finder',
           style: TextStyle(
-            color: Colors.black,
-            fontSize: 22,
+            color: Colors.white,
+            fontSize: 20,
             fontWeight: FontWeight.bold
           ),
         ),
         elevation: 0.0,
-        backgroundColor: Colors.white,
+        backgroundColor: Colors.purple,
         centerTitle: true,
       ),
       body: const Column(

@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:disease_diet_restaurant_finder/models/disease.dart';
 import 'package:flutter/material.dart';
 
